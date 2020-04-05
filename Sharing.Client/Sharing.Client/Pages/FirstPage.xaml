@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvx:MvxContentPage  xmlns:mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+                     xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     mc:Ignorable="d"
+                     x:Class="Sharing.Client.UI.Pages.FirstPage"
+                     xmlns:viewModels="clr-namespace:Sharing.Client.Core.ViewModels;assembly=Sharing.Client.Core"
+                     x:TypeArguments="viewModels:FirstPageViewModel">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding Data}" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"/>
+            <Button Text="Start/Stop"
+                    Command="{Binding ToggleIsRunningCommand}"
+                    VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</mvx:MvxContentPage>
